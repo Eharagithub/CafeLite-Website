@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+/* Custom font variables */
+:root {
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Montserrat', system-ui, sans-serif;
+  --gold: #c9a84c;
+  --gold-light: #e8cc7a;
+  --dark: #0a0a0a;
+  --dark-2: #111111;
+  --dark-3: #1a1a1a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--dark);
+  color: #e8e0d0;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.font-display { font-family: var(--font-display); }
+
+.text-gold {
+  background: linear-gradient(135deg, #c9a84c, #e8cc7a, #c9a84c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+.ornament::before,
+.ornament::after {
+  content: '';
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(to right, transparent, #c9a84c);
+}
+.ornament::after {
+  background: linear-gradient(to left, transparent, #c9a84c);
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 2px; }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 768px) {
+  .desktop-nav { display: none !important; }
+}
+@media (min-width: 769px) {
+  .mobile-hamburger { display: none !important; }
+}
