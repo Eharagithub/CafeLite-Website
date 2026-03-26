@@ -58,13 +58,13 @@ export default function Home() {
       <section
         ref={heroRef}
         className="grain-overlay"
-        style={{ position: 'relative', height: '100vh', minHeight: 720, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', backgroundImage: 'url(/public/assets/9.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}
+        style={{ position: 'relative', height: '100vh', minHeight: 720, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', backgroundImage: 'url(/assets/9.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}
       >
         {/* Static background divider instead of motion */}
         <div
           style={{
             position: 'absolute', inset: '-10%',
-            backgroundImage: 'url(/public/assets/9.jpg)',
+            backgroundImage: 'url(/assets/9.jpg)',
             backgroundSize: 'cover', backgroundPosition: 'left', opacity: 0.131,
           }}
         />
@@ -198,7 +198,7 @@ export default function Home() {
           {/* Left — image panel */}
           <FadeIn direction="left">
             <div className="img-hover-zoom" style={{ position: 'relative', height: '100%', minHeight: 580 }}>
-              <img src="/public/assets/4.jpg" alt="Signature dish" style={{ position: 'absolute', inset: 0 }} />
+              <img src="/assets/4.jpg" alt="Signature dish" style={{ position: 'absolute', inset: 0 }} />
               {/* Overlay */}
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(5,4,2,0.15) 0%, rgba(5,4,2,0.55) 100%)' }} />
               {/* Badge */}
